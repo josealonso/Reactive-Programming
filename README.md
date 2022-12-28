@@ -57,3 +57,16 @@ can be used for both.
 
 Spring does the subscription for you.
 
+### Performance 
+
+Extracted from the Spring documentation:
+```
+Performance has many characteristics and meanings. Reactive and non-blocking generally do not make applications run faster. They can, in some cases. 
+For example, if using the WebClient to run remote calls in parallel. On the whole, it requires more work to do things the non-blocking way 
+and that can slightly increase the required processing time.
+
+The key expected benefit of reactive and non-blocking is the ability to scale with a small, fixed number of threads and less memory.
+That makes applications more resilient under load, because they scale in a more predictable way. In order to observe those benefits, however, 
+you need to have some latency (including a mix of slow and unpredictable network I/O). That is where the reactive stack begins to show its strengths, and the differences can be dramatic.
+```
+
